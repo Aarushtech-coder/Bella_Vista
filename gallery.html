@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery – Bella Vista Restaurant</title>
+    <meta name="description" content="Browse the Bella Vista gallery — beautiful food photography, our stunning dining room, kitchen action, and unforgettable moments." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <header class="header" id="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <div class="logo-text">
+              <h1>Bella Vista</h1>
+              <span class="tagline">Authentic Italian Cuisine</span>
+            </div>
+          </a>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+            <li><a href="menu.html" class="nav-link" id="nav-menu">Menu</a></li>
+            <li><a href="gallery.html" class="nav-link active" id="nav-gallery">Gallery</a></li>
+            <li><a href="chatbot.html" class="nav-link" id="nav-chatbot">💬 Ask Bella</a></li>
+            <li><a href="reservation.html" class="nav-link btn-reserve" id="nav-reservation">Reserve a Table</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero--gallery">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="section-eyebrow">A Feast for the Eyes</p>
+        <h2>Our Gallery</h2>
+        <p>Captured moments of beauty, flavour, and warmth</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+      <div class="container">
+        <!-- Filter -->
+        <div class="gallery-tabs" id="gallery-tabs">
+          <button class="tab-btn active" data-filter="all" id="gtab-all">All</button>
+          <button class="tab-btn" data-filter="food" id="gtab-food">Food</button>
+          <button class="tab-btn" data-filter="ambience" id="gtab-ambience">Ambience</button>
+          <button class="tab-btn" data-filter="kitchen" id="gtab-kitchen">Kitchen</button>
+          <button class="tab-btn" data-filter="events" id="gtab-events">Events</button>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+          <div class="gallery-item tall" data-filter="ambience" id="gitem-1">
+            <img src="img/gallery-dining.png" alt="Elegant dining room ambience" loading="lazy" />
+            <div class="gallery-overlay"><span>Dining Room</span></div>
+          </div>
+          <div class="gallery-item" data-filter="food" id="gitem-2">
+            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=600" alt="Spaghetti Carbonara" loading="lazy" />
+            <div class="gallery-overlay"><span>Spaghetti Carbonara</span></div>
+          </div>
+          <div class="gallery-item" data-filter="food" id="gitem-3">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600" alt="Margherita Pizza" loading="lazy" />
+            <div class="gallery-overlay"><span>Margherita al Forno</span></div>
+          </div>
+          <div class="gallery-item wide" data-filter="ambience" id="gitem-4">
+            <img src="img/hero.png" alt="Restaurant interior" loading="lazy" />
+            <div class="gallery-overlay"><span>Our Interior</span></div>
+          </div>
+          <div class="gallery-item" data-filter="kitchen" id="gitem-5">
+            <img src="img/chef.png" alt="Chef at work" loading="lazy" />
+            <div class="gallery-overlay"><span>Chef Marco at Work</span></div>
+          </div>
+          <div class="gallery-item" data-filter="food" id="gitem-6">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600" alt="Tiramisù" loading="lazy" />
+            <div class="gallery-overlay"><span>Classic Tiramisù</span></div>
+          </div>
+          <div class="gallery-item" data-filter="food" id="gitem-7">
+            <img src="img/food-spread.png" alt="Italian food spread" loading="lazy" />
+            <div class="gallery-overlay"><span>A Feast of Italy</span></div>
+          </div>
+          <div class="gallery-item" data-filter="events" id="gitem-8">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600" alt="Private event" loading="lazy" />
+            <div class="gallery-overlay"><span>Private Events</span></div>
+          </div>
+          <div class="gallery-item tall" data-filter="food" id="gitem-9">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600" alt="Bolognese pasta" loading="lazy" />
+            <div class="gallery-overlay"><span>Tagliatelle Bolognese</span></div>
+          </div>
+          <div class="gallery-item" data-filter="ambience" id="gitem-10">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600" alt="Restaurant ambience" loading="lazy" />
+            <div class="gallery-overlay"><span>Evening Ambience</span></div>
+          </div>
+          <div class="gallery-item" data-filter="kitchen" id="gitem-11">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600" alt="Kitchen action" loading="lazy" />
+            <div class="gallery-overlay"><span>Kitchen Craft</span></div>
+          </div>
+          <div class="gallery-item wide" data-filter="events" id="gitem-12">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600" alt="Wine tasting event" loading="lazy" />
+            <div class="gallery-overlay"><span>Wine Tasting Evening</span></div>
+          </div>
+        </div><!-- end gallery-grid -->
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+          <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+          <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+          <button class="lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+          <div class="lightbox-img-wrap">
+            <img id="lightbox-img" src="" alt="" />
+            <p id="lightbox-caption"></p>
+          </div>
+        </div>
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Love What You See?</h2>
+          <p>Come experience it in person — reserve your table tonight.</p>
+          <div class="cta-buttons">
+            <a href="reservation.html" class="btn btn-gold" id="gallery-cta-reserve">Reserve a Table</a>
+            <a href="menu.html" class="btn btn-outline-light" id="gallery-cta-menu">Explore the Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">🍷 Bella Vista</div>
+            <p>Authentic Italian cuisine crafted with passion and served with heart since 2008.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" id="social-instagram">📷</a>
+              <a href="#" class="social-link" id="social-facebook">📘</a>
+              <a href="#" class="social-link" id="social-twitter">🐦</a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+          </div>
+          <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <ul>
+              <li><span>Mon – Thu</span><span>5:00 PM – 10:00 PM</span></li>
+              <li><span>Fri – Sat</span><span>5:00 PM – 11:30 PM</span></li>
+              <li><span>Sunday</span><span>4:00 PM – 9:00 PM</span></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📍 69 Italian Street, City Center<br>New York, NY 10001</p>
+            <p>📞 <a href="tel:+16969696969">+1 (696) 969-6969</a></p>
+            <p>✉️ <a href="mailto:info@bellavista.com">info@bellavista.com</a></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Bella Vista Restaurant. All rights reserved.</p>
+          <p>Made with ❤️ in New York</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>

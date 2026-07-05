@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – Bella Vista Restaurant</title>
+    <meta name="description" content="Discover the story of Bella Vista — founded with a passion for authentic Italian cooking, our chefs and team bring Italy to New York every night." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <header class="header" id="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <div class="logo-text">
+              <h1>Bella Vista</h1>
+              <span class="tagline">Authentic Italian Cuisine</span>
+            </div>
+          </a>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="nav-link active" id="nav-about">About</a></li>
+            <li><a href="menu.html" class="nav-link" id="nav-menu">Menu</a></li>
+            <li><a href="gallery.html" class="nav-link" id="nav-gallery">Gallery</a></li>
+            <li><a href="chatbot.html" class="nav-link" id="nav-chatbot">💬 Ask Bella</a></li>
+            <li><a href="reservation.html" class="nav-link btn-reserve" id="nav-reservation">Reserve a Table</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero--about">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="section-eyebrow">Who We Are</p>
+        <h2>Our Story</h2>
+        <p>Passion, tradition, and a pinch of Italian soul</p>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="about-story">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-col">
+            <img src="img/chef.png" alt="Chef Marco Bellini" class="about-main-img" />
+          </div>
+          <div class="about-text-col">
+            <p class="section-eyebrow">Est. 2008</p>
+            <h2 class="section-title">From Rome to New York,<br>With Love</h2>
+            <p>Bella Vista was founded in 2008 by <strong>Chef Marco Bellini</strong>, a native of Rome who spent 20 years cooking in the finest trattorias of Italy before bringing his heritage to New York. His dream was simple: to recreate the warmth, flavour, and soul of an authentic Italian meal for every guest that walks through our door.</p>
+            <p>What began as a cozy 30-seat dining room on Italian Street has grown into one of Manhattan's most celebrated restaurants — yet our values remain unchanged. We import the finest ingredients directly from Italy: San Marzano tomatoes from Naples, aged Parmigiano Reggiano from Emilia-Romagna, extra-virgin olive oil from Tuscany, and Barolo wines from the Piedmont hills.</p>
+            <p>Every night at Bella Vista is a homecoming — for those who remember Italy, and a first discovery for those who are yet to fall in love with it.</p>
+            <a href="reservation.html" class="btn btn-primary" id="about-reserve-btn">Experience It Yourself</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">What We Stand For</p>
+          <h2 class="section-title">Our Pillars</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card" id="value-ingredients">
+            <div class="value-icon">🫒</div>
+            <h3>Finest Ingredients</h3>
+            <p>We source directly from Italian farms and artisans — no shortcuts, no compromises. Quality begins at the source.</p>
+          </div>
+          <div class="value-card" id="value-tradition">
+            <div class="value-icon">📜</div>
+            <h3>Living Tradition</h3>
+            <p>Our recipes honour centuries-old techniques while leaving room for creative expression from our chefs.</p>
+          </div>
+          <div class="value-card" id="value-hospitality">
+            <div class="value-icon">🤝</div>
+            <h3>Warm Hospitality</h3>
+            <p>In Italy, the table is a sacred place. Every guest is family — we treat them that way, always.</p>
+          </div>
+          <div class="value-card" id="value-sustainability">
+            <div class="value-icon">♻️</div>
+            <h3>Sustainability</h3>
+            <p>We work with sustainable fisheries, local organic farms, and zero-waste kitchen practices to protect what we love.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE TEAM -->
+    <section class="team-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">The People Behind Every Plate</p>
+          <h2 class="section-title">Meet Our Team</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-card" id="team-marco">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#c9a84c,#8b5e3c)">MC</div>
+            <h3>Marco Bellini</h3>
+            <span class="team-role">Head Chef &amp; Founder</span>
+            <p>Born in Rome. Trained under three Michelin-starred chefs before founding Bella Vista. His carbonara has been called "life-changing" by the NY Times.</p>
+          </div>
+          <div class="team-card" id="team-sofia">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#8b3c5e,#c94c7a)">SF</div>
+            <h3>Sofia Ricci</h3>
+            <span class="team-role">Pastry Chef</span>
+            <p>A graduate of ALMA – La Scuola Internazionale di Cucina Italiana. Sofia's tiramisù has won the New York Italian Food Award twice.</p>
+          </div>
+          <div class="team-card" id="team-luca">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#3c5e8b,#4c7ac9)">LC</div>
+            <h3>Luca De Luca</h3>
+            <span class="team-role">Head Sommelier</span>
+            <p>With 15 years curating Italian wine lists, Luca's wine pairing dinners are legendary in New York's dining scene.</p>
+          </div>
+          <div class="team-card" id="team-elena">
+            <div class="team-avatar" style="background:linear-gradient(135deg,#3c8b4c,#4cc97a)">EM</div>
+            <h3>Elena Moretti</h3>
+            <span class="team-role">Restaurant Manager</span>
+            <p>Elena ensures every visit is seamless, warm, and memorable. Her eye for hospitality sets the standard for our entire front-of-house team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS & RECOGNITION -->
+    <section class="awards-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Recognition</p>
+          <h2 class="section-title">Awards &amp; Accolades</h2>
+        </div>
+        <div class="awards-grid">
+          <div class="award-card" id="award-1">
+            <div class="award-year">2023</div>
+            <div class="award-icon">🏆</div>
+            <h4>Best Italian Restaurant</h4>
+            <p>New York Zagat Guide</p>
+          </div>
+          <div class="award-card" id="award-2">
+            <div class="award-year">2022</div>
+            <div class="award-icon">⭐</div>
+            <h4>One Michelin Star</h4>
+            <p>Michelin Guide New York</p>
+          </div>
+          <div class="award-card" id="award-3">
+            <div class="award-year">2021</div>
+            <div class="award-icon">🥇</div>
+            <h4>Top 10 Romantic Restaurants</h4>
+            <p>OpenTable Diners' Choice</p>
+          </div>
+          <div class="award-card" id="award-4">
+            <div class="award-year">2019</div>
+            <div class="award-icon">🍕</div>
+            <h4>Best Neapolitan Pizza</h4>
+            <p>NYC Pizza Week Awards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Come Be Part of Our Story</h2>
+          <p>Every evening is a new chapter. Reserve your seat at the table.</p>
+          <div class="cta-buttons">
+            <a href="reservation.html" class="btn btn-gold" id="about-cta-reserve">Make a Reservation</a>
+            <a href="menu.html" class="btn btn-outline-light" id="about-cta-menu">View Our Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">🍷 Bella Vista</div>
+            <p>Authentic Italian cuisine crafted with passion and served with heart since 2008.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" id="social-instagram">📷</a>
+              <a href="#" class="social-link" id="social-facebook">📘</a>
+              <a href="#" class="social-link" id="social-twitter">🐦</a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+          </div>
+          <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <ul>
+              <li><span>Mon – Thu</span><span>5:00 PM – 10:00 PM</span></li>
+              <li><span>Fri – Sat</span><span>5:00 PM – 11:30 PM</span></li>
+              <li><span>Sunday</span><span>4:00 PM – 9:00 PM</span></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📍 69 Italian Street, City Center<br>New York, NY 10001</p>
+            <p>📞 <a href="tel:+16969696969">+1 (696) 969-6969</a></p>
+            <p>✉️ <a href="mailto:info@bellavista.com">info@bellavista.com</a></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Bella Vista Restaurant. All rights reserved.</p>
+          <p>Made with ❤️ in New York</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>

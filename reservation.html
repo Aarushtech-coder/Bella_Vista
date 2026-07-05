@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve a Table – Bella Vista Restaurant</title>
+    <meta name="description" content="Book your table at Bella Vista. Online reservations available for dinner and special events. We look forward to welcoming you." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <header class="header" id="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <div class="logo-text">
+              <h1>Bella Vista</h1>
+              <span class="tagline">Authentic Italian Cuisine</span>
+            </div>
+          </a>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+            <li><a href="menu.html" class="nav-link" id="nav-menu">Menu</a></li>
+            <li><a href="gallery.html" class="nav-link" id="nav-gallery">Gallery</a></li>
+            <li><a href="chatbot.html" class="nav-link" id="nav-chatbot">💬 Ask Bella</a></li>
+            <li><a href="reservation.html" class="nav-link btn-reserve active" id="nav-reservation">Reserve a Table</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero--reservation">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="section-eyebrow">We'd Love to Have You</p>
+        <h2>Reserve Your Table</h2>
+        <p>Select your date, time, and party — we'll take care of the rest</p>
+      </div>
+    </section>
+
+    <!-- RESERVATION SECTION -->
+    <section class="reservation-section">
+      <div class="container">
+        <div class="reservation-layout">
+
+          <!-- FORM -->
+          <div class="reservation-form-wrap">
+            <h2 class="section-title">Book a Table</h2>
+            <p class="section-sub">Fill in the details below and we'll confirm your reservation within 24 hours.</p>
+
+            <!-- Success Message -->
+            <div class="form-success" id="form-success" style="display:none;">
+              <div class="success-icon">✅</div>
+              <h3>Reservation Received!</h3>
+              <p>Thank you! We've received your reservation request and will confirm it via email within 24 hours. <em>Ci vediamo presto!</em> (See you soon!)</p>
+              <a href="index.html" class="btn btn-primary" id="back-home-btn">Back to Home</a>
+            </div>
+
+            <form id="reservation-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-fname">First Name <span class="required">*</span></label>
+                  <input type="text" id="res-fname" name="fname" placeholder="Marco" required />
+                  <span class="field-error" id="err-fname"></span>
+                </div>
+                <div class="form-group">
+                  <label for="res-lname">Last Name <span class="required">*</span></label>
+                  <input type="text" id="res-lname" name="lname" placeholder="Rossi" required />
+                  <span class="field-error" id="err-lname"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-email">Email <span class="required">*</span></label>
+                  <input type="email" id="res-email" name="email" placeholder="marco@email.com" required />
+                  <span class="field-error" id="err-email"></span>
+                </div>
+                <div class="form-group">
+                  <label for="res-phone">Phone <span class="required">*</span></label>
+                  <input type="tel" id="res-phone" name="phone" placeholder="+1 (555) 000-0000" required />
+                  <span class="field-error" id="err-phone"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-date">Date <span class="required">*</span></label>
+                  <input type="date" id="res-date" name="date" required />
+                  <span class="field-error" id="err-date"></span>
+                </div>
+                <div class="form-group">
+                  <label for="res-time">Time <span class="required">*</span></label>
+                  <select id="res-time" name="time" required>
+                    <option value="">Select a time</option>
+                    <option value="17:00">5:00 PM</option>
+                    <option value="17:30">5:30 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="18:30">6:30 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="19:30">7:30 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                    <option value="20:30">8:30 PM</option>
+                    <option value="21:00">9:00 PM</option>
+                    <option value="21:30">9:30 PM</option>
+                  </select>
+                  <span class="field-error" id="err-time"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-guests">Number of Guests <span class="required">*</span></label>
+                  <select id="res-guests" name="guests" required>
+                    <option value="">Select party size</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="7-10">7–10 Guests (large group)</option>
+                    <option value="10+">10+ Guests (private event)</option>
+                  </select>
+                  <span class="field-error" id="err-guests"></span>
+                </div>
+                <div class="form-group">
+                  <label for="res-occasion">Special Occasion</label>
+                  <select id="res-occasion" name="occasion">
+                    <option value="">Select (optional)</option>
+                    <option value="birthday">🎂 Birthday</option>
+                    <option value="anniversary">💍 Anniversary</option>
+                    <option value="date">❤️ Date Night</option>
+                    <option value="business">💼 Business Dinner</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="res-requests">Special Requests</label>
+                <textarea id="res-requests" name="requests" rows="4" placeholder="Dietary requirements, allergies, seating preferences, high chair needed, etc."></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="checkbox-label" for="res-newsletter">
+                  <input type="checkbox" id="res-newsletter" name="newsletter" />
+                  <span>Sign me up for exclusive offers and wine event invites</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submit-reservation-btn">
+                <span class="btn-text">Confirm Reservation</span>
+                <span class="btn-loading" style="display:none;">Processing...</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- SIDEBAR INFO -->
+          <div class="reservation-sidebar">
+            <div class="sidebar-card" id="sidebar-info">
+              <h3>📍 Find Us</h3>
+              <p>69 Italian Street, City Center<br>New York, NY 10001</p>
+              <a href="https://maps.google.com/?q=New+York+NY" target="_blank" rel="noopener" id="get-directions-btn" class="btn btn-outline-dark">Get Directions</a>
+            </div>
+
+            <div class="sidebar-card" id="sidebar-hours">
+              <h3>🕐 Opening Hours</h3>
+              <ul class="hours-list">
+                <li><span>Monday – Thursday</span><span>5:00 PM – 10:00 PM</span></li>
+                <li><span>Friday – Saturday</span><span>5:00 PM – 11:30 PM</span></li>
+                <li><span>Sunday</span><span>4:00 PM – 9:00 PM</span></li>
+              </ul>
+              <p class="sidebar-note">Last seating is 90 minutes before closing.</p>
+            </div>
+
+            <div class="sidebar-card" id="sidebar-contact">
+              <h3>📞 Prefer to Call?</h3>
+              <p>Speak directly with our reservations team.</p>
+              <a href="tel:+16969696969" class="btn btn-gold" id="call-us-btn">+1 (696) 969-6969</a>
+            </div>
+
+            <div class="sidebar-card sidebar-policy" id="sidebar-policy">
+              <h3>📋 Reservation Policy</h3>
+              <ul>
+                <li>Reservations held for <strong>15 minutes</strong> after booking time.</li>
+                <li>Cancellations accepted up to <strong>2 hours</strong> in advance.</li>
+                <li>For parties of <strong>7+</strong>, please call us directly.</li>
+                <li>Dress code: <strong>Smart Casual</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">🍷 Bella Vista</div>
+            <p>Authentic Italian cuisine crafted with passion and served with heart since 2008.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" id="social-instagram">📷</a>
+              <a href="#" class="social-link" id="social-facebook">📘</a>
+              <a href="#" class="social-link" id="social-twitter">🐦</a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+          </div>
+          <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <ul>
+              <li><span>Mon – Thu</span><span>5:00 PM – 10:00 PM</span></li>
+              <li><span>Fri – Sat</span><span>5:00 PM – 11:30 PM</span></li>
+              <li><span>Sunday</span><span>4:00 PM – 9:00 PM</span></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📍 69 Italian Street, City Center<br>New York, NY 10001</p>
+            <p>📞 <a href="tel:+16969696969">+1 (696) 969-6969</a></p>
+            <p>✉️ <a href="mailto:info@bellavista.com">info@bellavista.com</a></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Bella Vista Restaurant. All rights reserved.</p>
+          <p>Made with ❤️ in New York</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>

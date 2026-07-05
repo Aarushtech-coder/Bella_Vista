@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Bella – Bella Vista AI Virtual Assistant</title>
+    <meta
+      name="description"
+      content="Chat with Bella, our virtual AI assistant. Book a table, browse our signature dishes, check opening hours, or ask for Chef Marco's daily recommendations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="header" id="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <div class="logo-text">
+              <h1>Bella Vista</h1>
+              <span class="tagline">Authentic Italian Cuisine</span>
+            </div>
+          </a>
+          <ul class="nav-links" id="nav-links">
+            <li>
+              <a href="index.html" class="nav-link" id="nav-home">Home</a>
+            </li>
+            <li><a href="menu.html" class="nav-link" id="nav-menu">Menu</a></li>
+            <li>
+              <a href="about.html" class="nav-link" id="nav-about">About</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="nav-link" id="nav-gallery"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="chatbot.html" class="nav-link active" id="nav-chatbot"
+                >💬 Ask Bella</a
+              >
+            </li>
+            <li>
+              <a
+                href="reservation.html"
+                class="nav-link btn-reserve"
+                id="nav-reservation"
+                >Reserve a Table</a
+              >
+            </li>
+          </ul>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CHATBOT MAIN CONTAINER -->
+    <main class="chatbot-page-container">
+      <div class="chatbot-wrapper">
+        <!-- SIDEBAR DASHBOARD -->
+        <aside class="chatbot-sidebar">
+          <div class="sidebar-top">
+            <div class="bot-profile">
+              <div class="bot-avatar-large">
+                👩‍🍳
+                <span class="pulse-badge pulse-animation"></span>
+              </div>
+              <div class="bot-info-meta">
+                <h2>Bella</h2>
+                <div class="bot-status">
+                  <span class="bot-status-dot"></span>
+                  <span>Virtual Assistant</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="quick-stats-widget">
+              <div class="stat-item">
+                <span class="stat-icon">👨‍🍳</span>
+                <div class="stat-text">
+                  <small>Kitchen Chef</small>
+                  <span>Chef Marco Bellini</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">🚗</span>
+                <div class="stat-text">
+                  <small>Valet Parking</small>
+                  <span>Complimentary</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">📍</span>
+                <div class="stat-text">
+                  <small>Location</small>
+                  <span>City Center, NYC</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="specials-widget">
+              <h4>⭐ Signature Special</h4>
+              <p>
+                Ossobuco alla Milanese: Savor braised veal shank in rich
+                gremolata, served over a golden bed of saffron risotto.
+              </p>
+              <span class="price">$48</span>
+            </div>
+          </div>
+
+          <div class="sidebar-footer">
+            <p>Est. 2008 · New York City</p>
+            <p>© 2026 Bella Vista Restaurant</p>
+          </div>
+        </aside>
+
+        <!-- CHAT WINDOW -->
+        <section class="chat-window">
+          <!-- Chat Window Header -->
+          <header class="chat-header">
+            <div class="chat-header-info">
+              <h3>Assistant Console</h3>
+              <span>Ask me about our recipes, location, or book a table</span>
+            </div>
+            <div class="chat-actions">
+              <button
+                class="chat-action-btn"
+                id="volume-toggle"
+                title="Mute chimes"
+              >
+                🔊
+              </button>
+              <button
+                class="chat-action-btn"
+                id="clear-chat"
+                title="Restart conversation"
+              >
+                🔄
+              </button>
+            </div>
+          </header>
+
+          <!-- Chat messages feed -->
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages populated dynamically by JavaScript -->
+          </div>
+
+          <!-- Interactive Suggestion Chips -->
+          <div class="chat-suggestions" id="chat-suggestions">
+            <!-- Chips populated dynamically by JavaScript -->
+          </div>
+
+          <!-- Chat Input Area -->
+          <div class="chat-input-wrapper">
+            <div class="chat-input-container">
+              <input
+                type="text"
+                class="chat-input"
+                id="chat-input"
+                placeholder="Ask me about menu, reservations, hours..."
+                maxlength="200"
+                autocomplete="off"
+              />
+              <div class="input-actions">
+                <button
+                  class="input-action-btn"
+                  id="chat-mic-btn"
+                  title="Simulate voice input"
+                >
+                  🎙️
+                </button>
+                <button
+                  class="btn btn-primary send-btn"
+                  id="chat-send-btn"
+                  aria-label="Send message"
+                >
+                  Send →
+                </button>
+              </div>
+            </div>
+            <div class="input-counter" id="char-counter">0/200</div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">🍷 Bella Vista</div>
+            <p>
+              Authentic Italian cuisine crafted with passion and served with
+              heart since 2008.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+  </body>
+</html>

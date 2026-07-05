@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu – Bella Vista Restaurant</title>
+    <meta name="description" content="Explore Bella Vista's full menu — from bruschetta and handmade pasta to wood-fired pizzas, fresh seafood, and classic Italian desserts." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <header class="header" id="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <div class="logo-text">
+              <h1>Bella Vista</h1>
+              <span class="tagline">Authentic Italian Cuisine</span>
+            </div>
+          </a>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+            <li><a href="menu.html" class="nav-link active" id="nav-menu">Menu</a></li>
+            <li><a href="gallery.html" class="nav-link" id="nav-gallery">Gallery</a></li>
+            <li><a href="chatbot.html" class="nav-link" id="nav-chatbot">💬 Ask Bella</a></li>
+            <li><a href="reservation.html" class="nav-link btn-reserve" id="nav-reservation">Reserve a Table</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="section-eyebrow">What We Serve</p>
+        <h2>Our Menu</h2>
+        <p>Every dish is a celebration of Italy's finest traditions</p>
+      </div>
+    </section>
+
+    <!-- MENU FILTER TABS -->
+    <section class="menu-section">
+      <div class="container">
+        <div class="menu-tabs" id="menu-tabs" role="tablist">
+          <button class="tab-btn active" data-category="all" id="tab-all" role="tab">All</button>
+          <button class="tab-btn" data-category="appetizers" id="tab-appetizers" role="tab">Appetizers</button>
+          <button class="tab-btn" data-category="pasta" id="tab-pasta" role="tab">Pasta</button>
+          <button class="tab-btn" data-category="pizza" id="tab-pizza" role="tab">Pizza</button>
+          <button class="tab-btn" data-category="mains" id="tab-mains" role="tab">Main Courses</button>
+          <button class="tab-btn" data-category="desserts" id="tab-desserts" role="tab">Desserts</button>
+          <button class="tab-btn" data-category="drinks" id="tab-drinks" role="tab">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+
+          <!-- APPETIZERS -->
+          <div class="menu-card" data-category="appetizers" id="item-bruschetta">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Appetizer</span>
+                <span class="menu-price">$14</span>
+              </div>
+              <h3>Bruschetta Italiana</h3>
+              <p>Fresh heirloom tomatoes, basil, mozzarella fior di latte on toasted sourdough, drizzled with aged balsamic.</p>
+              <div class="menu-card-tags">
+                <span class="tag vegetarian">🌿 Vegetarian</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="appetizers" id="item-antipasto">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1541014741259-de529411b96a?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Appetizer</span>
+                <span class="menu-price">$22</span>
+              </div>
+              <h3>Antipasto Platter</h3>
+              <p>Selection of prosciutto di Parma, salami Milano, aged Pecorino, olives, and marinated artichokes.</p>
+              <div class="menu-card-tags">
+                <span class="tag chef-special">⭐ Chef's Special</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="appetizers" id="item-calamari">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1612871689548-dd3f4518d6bf?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Appetizer</span>
+                <span class="menu-price">$18</span>
+              </div>
+              <h3>Calamari Fritti</h3>
+              <p>Crispy golden fried squid rings with house-made marinara and lemon aioli dipping sauces.</p>
+              <div class="menu-card-tags">
+                <span class="tag seafood">🐟 Seafood</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PASTA -->
+          <div class="menu-card" data-category="pasta" id="item-carbonara">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Pasta</span>
+                <span class="menu-price">$28</span>
+              </div>
+              <h3>Spaghetti Carbonara</h3>
+              <p>Traditional Roman recipe — guanciale, free-range egg yolk, Pecorino Romano, freshly cracked black pepper.</p>
+              <div class="menu-card-tags">
+                <span class="tag chef-special">⭐ Chef's Special</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pasta" id="item-bolognese">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Pasta</span>
+                <span class="menu-price">$26</span>
+              </div>
+              <h3>Tagliatelle Bolognese</h3>
+              <p>Slow-cooked beef and pork ragù, simmered for 6 hours, hand-rolled tagliatelle, Parmigiano Reggiano.</p>
+              <div class="menu-card-tags"></div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pasta" id="item-cacio">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1519997943163-2b42e4be1673?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Pasta</span>
+                <span class="menu-price">$24</span>
+              </div>
+              <h3>Cacio e Pepe</h3>
+              <p>Rome's most iconic pasta — Tonnarelli pasta, Pecorino Romano DOP, Parmigiano Reggiano, black pepper emulsion.</p>
+              <div class="menu-card-tags">
+                <span class="tag vegetarian">🌿 Vegetarian</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pasta" id="item-pesto">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Pasta</span>
+                <span class="menu-price">$23</span>
+              </div>
+              <h3>Trofie al Pesto Genovese</h3>
+              <p>Handmade trofie pasta with fresh basil pesto, pine nuts, Ligurian extra-virgin olive oil, and Parmigiano.</p>
+              <div class="menu-card-tags">
+                <span class="tag vegetarian">🌿 Vegetarian</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PIZZA -->
+          <div class="menu-card" data-category="pizza" id="item-margherita">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Pizza</span>
+                <span class="menu-price">$24</span>
+              </div>
+              <h3>Margherita al Forno</h3>
+              <p>San Marzano DOP tomato sauce, buffalo mozzarella, fresh basil leaves, extra virgin olive oil. Wood-fired.</p>
+              <div class="menu-card-tags">
+                <span class="tag vegetarian">🌿 Vegetarian</span>
+                <span class="tag chef-special">⭐ Chef's Special</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pizza" id="item-diavola">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Pizza</span>
+                <span class="menu-price">$27</span>
+              </div>
+              <h3>Pizza Diavola</h3>
+              <p>Spicy Calabrian nduja sausage, smoked mozzarella, roasted peppers, Sicilian oregano, fresh chilli.</p>
+              <div class="menu-card-tags">
+                <span class="tag spicy">🌶 Spicy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pizza" id="item-tartufata">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Pizza</span>
+                <span class="menu-price">$34</span>
+              </div>
+              <h3>Pizza Tartufata</h3>
+              <p>White base, black truffle cream, mushroom medley, Tallegio, shaved black truffle, fresh thyme.</p>
+              <div class="menu-card-tags">
+                <span class="tag vegetarian">🌿 Vegetarian</span>
+                <span class="tag chef-special">⭐ Chef's Special</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAINS -->
+          <div class="menu-card" data-category="mains" id="item-branzino">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Main Course</span>
+                <span class="menu-price">$42</span>
+              </div>
+              <h3>Branzino alla Griglia</h3>
+              <p>Whole grilled Mediterranean sea bass, lemon-caper butter, caponata, roasted cherry tomatoes.</p>
+              <div class="menu-card-tags">
+                <span class="tag seafood">🐟 Seafood</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="mains" id="item-ossobuco">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Main Course</span>
+                <span class="menu-price">$48</span>
+              </div>
+              <h3>Ossobuco alla Milanese</h3>
+              <p>Braised veal shank in white wine and gremolata, served with classic saffron risotto Milanese.</p>
+              <div class="menu-card-tags">
+                <span class="tag chef-special">⭐ Chef's Special</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DESSERTS -->
+          <div class="menu-card" data-category="desserts" id="item-tiramisu">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Dessert</span>
+                <span class="menu-price">$14</span>
+              </div>
+              <h3>Classic Tiramisù</h3>
+              <p>Mascarpone cream, espresso-soaked savoiardi biscuits, Amaretto, dusted with finest cocoa. Our heritage recipe.</p>
+              <div class="menu-card-tags">
+                <span class="tag chef-special">⭐ Chef's Special</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="desserts" id="item-pannacotta">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Dessert</span>
+                <span class="menu-price">$12</span>
+              </div>
+              <h3>Panna Cotta al Lampone</h3>
+              <p>Silky vanilla panna cotta, fresh raspberry coulis, crushed pistachio, edible flowers.</p>
+              <div class="menu-card-tags">
+                <span class="tag vegetarian">🌿 Vegetarian</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DRINKS -->
+          <div class="menu-card" data-category="drinks" id="item-negroni">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Cocktail</span>
+                <span class="menu-price">$16</span>
+              </div>
+              <h3>Classic Negroni</h3>
+              <p>Gin, Campari, sweet vermouth, orange peel. Italy's most beloved aperitivo since 1919.</p>
+              <div class="menu-card-tags"></div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="drinks" id="item-aperol">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1560512823-829485b8bf24?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Cocktail</span>
+                <span class="menu-price">$14</span>
+              </div>
+              <h3>Aperol Spritz</h3>
+              <p>Aperol, Prosecco DOC, sparkling water, fresh orange slice. The quintessential Italian aperitivo.</p>
+              <div class="menu-card-tags"></div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="drinks" id="item-barolo">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <span class="menu-cat-tag">Wine</span>
+                <span class="menu-price">$22 / glass</span>
+              </div>
+              <h3>Barolo DOCG 2018</h3>
+              <p>The "King of Italian Wines" — Nebbiolo from Piedmont. Full-bodied, complex, pairs with red meats.</p>
+              <div class="menu-card-tags">
+                <span class="tag chef-special">⭐ Sommelier's Pick</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end menu-grid -->
+
+        <!-- Reservation CTA inside menu -->
+        <div class="section-cta" style="margin-top:3rem;">
+          <p style="margin-bottom:1rem;color:var(--text-muted);font-size:1.1rem;">Enjoyed what you see? Come dine with us.</p>
+          <a href="reservation.html" class="btn btn-primary" id="menu-reserve-btn">Reserve Your Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">🍷 Bella Vista</div>
+            <p>Authentic Italian cuisine crafted with passion and served with heart since 2008.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" id="social-instagram">📷</a>
+              <a href="#" class="social-link" id="social-facebook">📘</a>
+              <a href="#" class="social-link" id="social-twitter">🐦</a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+          </div>
+          <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <ul>
+              <li><span>Mon – Thu</span><span>5:00 PM – 10:00 PM</span></li>
+              <li><span>Fri – Sat</span><span>5:00 PM – 11:30 PM</span></li>
+              <li><span>Sunday</span><span>4:00 PM – 9:00 PM</span></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📍 69 Italian Street, City Center<br>New York, NY 10001</p>
+            <p>📞 <a href="tel:+16969696969">+1 (696) 969-6969</a></p>
+            <p>✉️ <a href="mailto:info@bellavista.com">info@bellavista.com</a></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Bella Vista Restaurant. All rights reserved.</p>
+          <p>Made with ❤️ in New York</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
